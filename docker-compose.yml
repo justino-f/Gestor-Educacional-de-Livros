@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    environment:
+      - MYSQL_DATABASE=gel-maria-de-magalhes-prd
+      - MYSQL_ROOT_PASSWORD=suportegel
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=suportegel
+    volumes:
+      - "./conf.d:/etc/mysql/conf.d:ro"
